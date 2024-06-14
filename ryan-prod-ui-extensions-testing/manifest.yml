@@ -1,0 +1,55 @@
+app_id: 07d63541a639448fbc3b7bb6b2d8d1ed
+name: habbott-prod-ui-extensions-testing
+description: testing ui extensions on talon 1
+logo: ""
+manifest_version: "2023-05-09"
+ignored:
+    - node_modules
+    - config
+    - LICENSE
+    - package.json
+    - package-lock.json
+ui:
+    homepage: ""
+    extensions:
+        - id: 191e2569a83148fa8ae03671d859e0a7
+          name: ryan-new-react
+          description: fdsafdsafdsafdsafdasfads
+          path: ui/extensions/ryan-new-react/src/dist
+          entrypoint: ui/extensions/ryan-new-react/src/dist/index.html
+          sockets:
+            - hosts.host.panel
+            - xdr.detections.panel
+            - workflows.executions.execution.details
+          content_security_policy:
+            connect-src:
+                - self
+                - 'data:'
+            style-src: []
+            style-src-elem: []
+            script-src: []
+            form-action: []
+            img-src:
+                - self
+                - 'data:'
+            media-src: []
+            object-src: []
+          permissions: []
+    pages: {}
+    dashboards: {}
+    navigation: {}
+api_integrations:
+    - id: 45a871e6ec41418d99c2782f364c4551
+      name: api-guru
+      description: ""
+      path: api-integrations/openapi.yaml
+rtr_scripts: []
+collections: []
+auth:
+    scopes: []
+    permissions: {}
+    roles: []
+functions: []
+workflows: []
+logscale:
+    saved_searches: []
